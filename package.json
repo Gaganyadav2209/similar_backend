@@ -1,0 +1,17 @@
+{
+  "name": "vp-backend",
+  "version": "1.0.0",
+  "description": "yt-similar backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "backend",
+    "yt",
+    "similar"
+  ],
+  "author": "",
+  "license": "ISC"
+}
