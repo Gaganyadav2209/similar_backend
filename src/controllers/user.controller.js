@@ -16,8 +16,7 @@ const registerUser = asyncHandler (async (req, res) => {
     // send response - remove password and refresh token from response
 
     const { username, email, fullname, password } = req.body
-    console.log(username, email, fullname, password);
-
+    
     // empty values
     if (
         [fullname, email, username, password].some((field) => {
