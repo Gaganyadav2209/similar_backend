@@ -143,7 +143,16 @@ const loginUser = asyncHandler (async (req,res) => {
 
     return res.status(200).
     cookie("accessToken",accessToken, options).
-    cookie("refreshToken", refreshToken, options)
+    cookie("refreshToken", refreshToken, options).
+    json(
+        new ApiResponse(
+            200, 
+            {
+                user: loggedInUser, accessToken, refreshToken
+            },
+            "User logged In Successfully"
+        )
+    )
     
 })
 
@@ -227,6 +236,13 @@ const refreshAccessToken = asyncHandler (async (req,res) => {
 
 
 }) 
+
+const changeCurrentPassword = asyncHandler (async (req,res) => {
+    const { oldPassword, newPassword } = req.body
+
+    req.user?._id
+
+})
 
 export { registerUser, loginUser, logoutUser, refreshAccessToken }
 
